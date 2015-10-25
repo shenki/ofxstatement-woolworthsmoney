@@ -9,12 +9,12 @@ version = "0.0.1"
 with open('README.rst') as f:
     long_description = f.read()
 
-setup(name='ofxstatement-sample',
+setup(name='ofxstatement-woolworthsmoney',
       version=version,
-      author="Andrey Lebedev",
-      author_email="andrey@lebedev.lt",
-      url="https://github.com/kedder/ofxstatement",
-      description=("Sample plugin for ofxstatement"),
+      author="Joel Stanley",
+      author_email="joel@jms.id.au",
+      url="https://github.com/shenki/ofxstatement-woolworthsmoney",
+      description=("Woolworths Money (Australia) plugin for ofxstatement"),
       long_description=long_description,
       license="GPLv3",
       keywords=["ofx", "banking", "statement"],
@@ -26,13 +26,13 @@ setup(name='ofxstatement-sample',
           'Topic :: Utilities',
           'Environment :: Console',
           'Operating System :: OS Independent',
-          'License :: OSI Approved :: GNU Affero General Public License v3'],
+          'License :: OSI Approved :: GNU General Public License v3'],
       packages=find_packages('src'),
       package_dir={'': 'src'},
       namespace_packages=["ofxstatement", "ofxstatement.plugins"],
       entry_points={
           'ofxstatement':
-          ['sample = ofxstatement.plugins.sample:SamplePlugin']
+          ['woolworthsmoney = ofxstatement.plugins.woolworthsmoney:WoolworthsMoneyPlugin']
           },
       install_requires=['ofxstatement'],
       include_package_data=True,
